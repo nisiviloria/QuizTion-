@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuizTion - Quiz in Progress</title>
+  <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+    <div class="particles"></div>
+    <div class="container quiz-page">
+        <!-- Welcome Screen -->
+        <div class="card welcome-screen">
+          <div class="avatar-circle">
+            <span class="avatar-initial" id="user-initial">?</span>
+          </div>
+          <h2 id="welcome-message">Welcome to the QuizTion App</h2>
+          <p class="subtitle">Get ready to test your JavaScript skills!</p>
+        </div>
+
+        <img src="guide.gif" alt="Guide" class="guide">
+        
+        <!-- Instructions -->
+        <div class="guides-wrapper">
+            <div class="guide-box">
+              <span class="guide-icon">✓</span>
+              <p>Choose the <b>correct best</b> answer for each question.</p>
+            </div>
+            <div class="guide-box">
+              <span class="guide-icon">📝</span>
+              <p>You'll encounter different formats: <b>fill in the blanks, multiple choice, and checkboxes.</b></p>
+            </div>
+            <div class="guide-box">
+              <span class="guide-icon">⏭️</span>
+              <p>Click <b>Next</b> after answering to proceed. <b>Good luck!</b></p>
+            </div>
+        </div>
+
+        <div class="button-wrapper">
+          <button class="exit-btn">
+            <span>Exit Quiz</span>
+          </button>
+          <button class="continue-btn">
+            <span>Let's Begin!</span>
+            <span class="btn-arrow">→</span>
+          </button>
+        </div>
+        
+        <!-- Quiz Container -->
+        <div id="quiz-container" class="quiz-container" style="display: none;">
+          <!-- Progress Bar -->
+          <div class="progress-bar-container">
+            <div class="progress-bar">
+              <div class="progress-fill" id="progress-fill"></div>
+            </div>
+            <div id="question-progress" class="question-progress"></div>
+          </div>
+
+          <!-- Question Display Area -->
+          <div class="question-display">
+            <div class="question-header">
+              <img src="ques.png" alt="Question Icon" class="question-icon">
+              <span class="question-type-badge" id="question-type-badge"></span>
+            </div>
+            <div id="question-content"></div>
+          </div>
+
+          <!-- Score Tracker -->
+          <div class="score-tracker">
+            <span class="score-label">Current Score:</span>
+            <span class="score-value" id="current-score">0</span>
+            <span class="score-total">/ 10</span>
+          </div>
+        </div>
+
+        <!-- Result Box -->
+        <div id="result-box" class="result-box" style="display: none;">
+          <div class="result-header">
+            <div class="result-icon" id="result-icon">🎉</div>
+            <h2 id="result-title">Quiz Complete!</h2>
+            <p id="result-message">Great effort!</p>
+          </div>
+
+          <div class="percentage-container">
+            <div class="circular-progress">
+              <svg class="progress-ring" width="180" height="180">
+                <circle class="progress-ring-circle" stroke="#e0e0e0" stroke-width="12" fill="transparent" r="80" cx="90" cy="90"/>
+                <circle class="progress-ring-circle progress-ring-fill" stroke="#4CAF50" stroke-width="12" fill="transparent" r="80" cx="90" cy="90" id="progress-circle"/>
+              </svg>
+              <span class="progress-value" id="progress-value">0%</span>
+            </div>
+            <div class="score-details">
+              <span class="score-text" id="score-text">Your score: 0 out of 10</span>
+              <div class="performance-badge" id="performance-badge"></div>
+            </div>
+          </div>
+
+          <div class="buttons">
+            <button class="tryAgain-btn">
+              <span>🔄 Try Again</span>
+            </button>
+            <button class="goHome-btn">
+              <span>🏠 Go Home</span>
+            </button>
+          </div>
+        </div>
+    </div>      
+
+  <script src="welcome.js"></script>
+</body>
+</html>

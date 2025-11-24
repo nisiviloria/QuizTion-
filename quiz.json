@@ -1,0 +1,17 @@
+{
+    "questions": [
+        {
+            "id": 1,  
+            "question": "What is JavaScript?",
+            "questionType": "MULTIPLE_CHOICE",
+            "options": [
+                "A markup language used to structure web pages",
+                "A programming language used to add interactivity to web pages",
+                "A stylesheet language used to style web pages",
+                "A database management system"
+            ],
+            "correctAnswer": ["A programming language used to add interactivity to web pages"],
+            "points": 1
+        }
+    ]
+}
