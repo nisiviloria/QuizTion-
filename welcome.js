@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('.exit-btn').addEventListener('click', function() {
         console.log('Exit button clicked');
         if (confirm('Are you sure you want to exit the quiz?')) {
-            window.location.href = "quizhome.html"; 
+            window.location.href = "index.html"; 
         }
     });
 
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const goHomeBtn = document.querySelector('.goHome-btn');
     if (goHomeBtn) {
         goHomeBtn.addEventListener('click', function() {
-            window.location.href = "quizhome.html";
+            window.location.href = "index.html";
         });
     }
 });
@@ -626,4 +626,5 @@ function hideResultBox() {
     if (resultBox) {
         resultBox.style.display = 'none'; 
     }
+
 }
